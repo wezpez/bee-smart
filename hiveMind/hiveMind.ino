@@ -104,8 +104,15 @@ void loop(void)
   Serial.print("\n");
 
   sendSensorData();
+  //check that the Wifi is still connected
+  if (WiFi.status() != WL_CONNECTED) {
+    // set LED to RED to indicate that some intervention is needed
+    WiFiDrv::analogWrite(25, 255);
+    WiFiDrv::analogWrite(26, 0);
+  }
   
-  delay(5000);
+  // we only need to run the loop every 5 min
+  delay(1000*60*5);
 }
 
 void getTemperatureData() {
@@ -121,6 +128,7 @@ void getWeightData() {
 }
 
 void sendSensorData() {
+  // send data to Matlab API
   String url = String("/update?api_key=") + apiKey +
                       "&field1=" + String(temperature1, 3) +
                       "&field2=" + String(temperature2, 3) +
@@ -140,7 +148,7 @@ void sendSensorData() {
   if (statusCode != 200) {
     WiFiDrv::analogWrite(25, 255);
     WiFiDrv::analogWrite(26, 0);
-    delay(50);
+    delay(1000);
     WiFiDrv::analogWrite(25, 0);
     WiFiDrv::analogWrite(26, 255);
   }
