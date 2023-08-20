@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="Tooplate">
+
+        <title>BeeSmart Dashboard</title>
+
+        <!-- CSS FILES -->      
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&display=swap" rel="stylesheet">
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+        <link href="css/apexcharts.css" rel="stylesheet">
+
+        <link href="css/bee-smart-dashboard.css" rel="stylesheet">
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script src="js/charts.js"></script>
+
+        
+<!--
+Started project using the following free template
+Tooplate 2135 Mini Finance
+https://www.tooplate.com/view/2135-mini-finance
+Bootstrap 5 Dashboard Admin Template
+-->
+
+    </head>
+    
+    <body>
+        <header class="navbar sticky-top flex-md-nowrap">
+            <div class="col-md-3 col-lg-3 me-0 px-3 fs-6">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/bee.png" alt="Custom Icon" class="icon-size">
+                    BeeSmart
+                </a>
+            </div>
+
+            <div class="navbar-nav me-lg-2">
+                <div class="nav-item text-nowrap d-flex align-items-center">
+                    <div class="dropdown ps-3">
+                        <a class="nav-link dropdown-toggle text-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="navbarLightDropdownMenuLink">
+                            <i class="bi-bell"></i>
+                            <span class="position-absolute start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-lg-end notifications-block-wrap bg-white shadow" aria-labelledby="navbarLightDropdownMenuLink">
+                            <small>Example Notifications</small>
+
+                            <li class="notifications-block border-bottom pb-2 mb-2">
+                                <a class="dropdown-item d-flex  align-items-center" href="#">
+                                    <div class="notifications-icon-wrap bg-success">
+                                        <i class="notifications-icon bi-check-circle-fill"></i>
+                                    </div>
+
+                                    <div>
+                                        <span>Beehive is ready to be harvested!</span>
+
+                                        <p>12 days ago</p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="notifications-block border-bottom pb-2 mb-2">
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="notifications-icon-wrap bg-info">
+                                        <i class="notifications-icon bi-folder"></i>
+                                    </div>
+
+                                    <div>
+                                        <span>Hive data has been downloaded.</span>
+
+                                        <p>10 days ago</p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="notifications-block">
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="notifications-icon-wrap bg-danger">
+                                        <i class="notifications-icon bi-question-circle"></i>
+                                    </div>
+
+                                    <div>
+                                        <span>Beehive is dangerously under weight!</span>
+
+                                        <p>1 hour ago</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+        </header>
+
+        <div class="container-fluid">
+            <div class="row">
+                <nav id="sidebarMenu" class="col-md-3 col-lg-3 d-md-block sidebar collapse">
+                    <div class="position-sticky py-4 px-3 sidebar-sticky">
+                        <ul class="nav flex-column h-100">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="index.html">
+                                    <i class="bi-graph-up-arrow me-2"></i>
+                                    Charts
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="map.html">
+                                    <i class="bi-pin-map me-2"></i>
+                                    Map
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="about.html">
+                                    <i class="bi-emoji-smile-fill me-2"></i>
+                                    About
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <main class="main-wrapper col-md-9 ms-sm-auto py-4 col-lg-9 px-md-4 border-start">
+                    <div class="title-group mb-3">
+                        <h1 class="h2 mb-0">About the Project</h1>
+
+                        <small class="text-muted">Say hello to BeeSmart, a new smart connected device made to empower beekeepers with seamless remote monitoring of beehive health. BeeSmart is outfitted with four highly precise load sensors that accurately gauge hive weight. Additionally, it features two advanced temperature probes, offering beekeepers the flexibility to insert them directly into their hive at the location of their choosing. BeeSmart is powered by the incredible Arduino MKR 1010, serving as the brains of the device. It seamlessly interfaces with these sensors, capturing vital hive data in real-time and integrating with the MatLab API. This allows the invaluable information to be effortlessly stored and presented in visually captivating displays.</small>
+                    </div>
+
+                    <div class="slider">
+  
+                        <a href="#slide-1">1</a>
+                        <a href="#slide-2">2</a>
+                        <a href="#slide-3">3</a>
+                        <a href="#slide-4">4</a>
+                        <a href="#slide-5">5</a>
+                      
+                        <div class="slides">
+                          <div id="slide-1">
+                            <img src="images/deployed-device.jpg" alt="The device deployed">
+                          </div>
+                          <div id="slide-2">
+                            <img src="images/internal-labeled.png" alt="Labeled decive internals">
+                          </div>
+                          <div id="slide-3">
+                            <img src="images/circuit-diagram.png" alt="The circuit diagram">
+                          </div>
+                          <div id="slide-4">
+                            <img src="images/hive-interior.jpg" alt="Inside the hive view">
+                          </div>
+                          <div id="slide-5">
+                            <img src="images/laser-cutter.jpg" alt="The laser cutter making the device enclosure">
+                          </div>
+                        </div>
+                    </div>
+
+                    <footer class="site-footer">
+                        <div class="container">
+                            <div class="row">
+                                
+                                <div class="col-lg-12 col-12">
+                                    <p class="copyright-text">Template Copyright © Mini Finance 2048 
+                                    - Design: <a rel="sponsored" href="https://www.tooplate.com" target="_blank">Tooplate</a></p>
+                                    <p class="copyright-text"> Bee Logo from flaticon
+                                        <a href="https://www.flaticon.com/free-icons/bee" title="bee icons">Bee icons created by Freepik - Flaticon</a></p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </footer>
+                </main>
+
+            </div>
+        </div>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/apexcharts.min.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
+</html>
