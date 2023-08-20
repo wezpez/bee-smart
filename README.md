@@ -8,4 +8,9 @@ The report provided in the report directory of this project will describe the de
 I encourage any and all beekeepers to help contribute to this project and to read the report to follow the process to create your own BeeSmart device.
 
 ## BeeSmart Device
+
 ![deployed-device](https://github.com/wezpez/bee-smart/assets/43673937/c5b26b3b-1978-4350-85f4-d253356ae06d)
+
+## Device Internals
+
+<img width="872" alt="internal-labeled" src="https://github.com/wezpez/bee-smart/assets/43673937/c5e0fd22-b3d7-4bc4-b718-affa0cf96f16">
